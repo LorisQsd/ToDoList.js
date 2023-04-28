@@ -1,0 +1,202 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(270deg, #A8C0FF 0%, #3F2B96 99.48%);
+    padding: clamp(20px, 2vw, 20px) 20px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Hammersmith One", sans-serif;
+    color: #ECECEC;
+    font-weight: normal;
+    font-size: clamp(40px, 5vw, 50px);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 50px 0;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/*INPUT-TASK*/
+.input-task {
+    display: block;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+
+.input-task label {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 30px;
+}
+
+.input-task input {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+}
+
+.input-task label div {
+    position: relative;
+}
+
+.input-task button {
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    padding: 2px 10px;
+    background: linear-gradient(90deg, #11998E 0%, #38EF7D 100%);
+    right: 10px;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 300ms;
+    font-size: medium;
+    font-weight: 600;
+    font-family: "Source sans pro", sans-serif;
+}
+
+::placeholder {
+    font-family: "source sans pro", sans-serif;
+    font-size: large;
+  }
+.input-task button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/*TASK*/
+.task {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 10px 0;
+}
+
+.task div:first-child p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.task span:first-child {
+    font-style: italic;
+}
+
+.modify-content {
+    position: relative;
+    margin-left: 10px;
+}
+
+.modify-content input {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    border-style: none;
+    padding: 5px 10px;
+    box-shadow: 0px 1px 20px 3px rgba(0, 0, 0, 0.25);
+    width: clamp(300px, 40vw, 400px);
+}
+
+.modify-content button {
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #FC4A1A 0%, #F7B733 100%);
+    transition: all 300ms;
+}
+
+.modify-content button:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.modify-content button img {
+    width: 15px;
+}
+.task p {
+    margin-right: 10px;
+}
+
+.group-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.group-btn button {
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.group-btn button:hover {
+    transform: scale(1.1);
+}
+
+.check-btn {
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #53BC2E;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.25);
+    border-style: none;
+}
+
+.modify-btn {
+    background: linear-gradient(90deg, #FC4A1A 0%, #F7B733 100%);
+    border-style: none;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.group-btn img {
+    user-select: none;
+    pointer-events: none;
+}
+
+#error-msg {
+    padding-top: 10px;
+    color: crimson;
+    font-weight: bold;
+    opacity: 0;
+}
+
+/*MEDIAQUERY*/
+
+@media screen and (max-width: 685px) {
+    .task {
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+    }
